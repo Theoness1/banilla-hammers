@@ -20,6 +20,7 @@
         "modmenu.curseforge": "https://curseforge.com/minecraft/mc-mods/banilla-hammers",
         "modmenu.modrinth": "https://modrinth.com/mod/banilla-hammers"
       }
+    }
     },
     "license": "MIT",
     "icon": "assets/banilla_hammers/banillahammerpre.png",
@@ -43,4 +44,3 @@
       "java": ">=17"
     }
   }
-}
