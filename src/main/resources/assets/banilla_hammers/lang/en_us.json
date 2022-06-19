@@ -1,0 +1,13 @@
+{
+  "item.banilla_hammers.netherite_hammer": "Netherite Hammer",
+  "item.banilla_hammers.diamond_hammer": "Diamond Hammer",
+  "item.banilla_hammers.iron_hammer": "Iron Hammer",
+  "item.banilla_hammers.golden_hammer": "Golden Hammer",
+  "item.banilla_hammers.copper_hammer": "Copper Hammer",
+  "item.banilla_hammers.stone_hammer": "Stone Hammer",
+  "item.banilla_hammers.wooden_hammer": "Wooden Hammer",
+
+  "effect.banilla_hammers.stun": "Stun",
+
+  "item.banilla_hammers.cryomarble_hammer": "Cryomarble Hammer"
+}

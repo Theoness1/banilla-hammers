@@ -1,0 +1,1 @@
+A mod that adds vanilla-styled hammers

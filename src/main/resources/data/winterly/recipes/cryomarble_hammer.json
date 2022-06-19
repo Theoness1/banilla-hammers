@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "banilla_hammers:iron_hammer"
+  },
+  "addition": {
+    "item": "winterly:cryomarble"
+  },
+  "result": {
+    "item": "banilla_hammers:cryomarble_hammer"
+  }
+}

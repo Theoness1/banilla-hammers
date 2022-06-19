@@ -1,0 +1,6 @@
+{
+  "parent": "banilla_hammers:item/hammer_model",
+  "textures": {
+    "0": "banilla_hammers:item/wooden_hammer_in_hand"
+  }
+}

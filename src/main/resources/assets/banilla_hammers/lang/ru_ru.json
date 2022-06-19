@@ -1,0 +1,13 @@
+{
+  "item.banilla_hammers.netherite_hammer": "Незеритовый молот",
+  "item.banilla_hammers.diamond_hammer": "Алмазный молот",
+  "item.banilla_hammers.iron_hammer": "Железный молот",
+  "item.banilla_hammers.golden_hammer": "Золотой молот",
+  "item.banilla_hammers.copper_hammer": "Медный молот",
+  "item.banilla_hammers.stone_hammer": "Каменный молот",
+  "item.banilla_hammers.wooden_hammer": "Деревянный молот",
+
+  "effect.banilla_hammers.stun": "Оглушение",
+
+  "item.banilla_hammers.cryomarble_hammer": "Криомраморный молот"
+}

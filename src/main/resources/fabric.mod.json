@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "banilla_hammers",
+  "version": "${version}",
+  "name": "Banilla Hammers",
+  "description": "A mod that adds vanilla-styled hammers!!",
+  "authors": [
+    "theone_ss",
+    "PinkGoosik"
+  ],
+  "contact": {
+    "homepage": "https://modrinth.com/banilla-hammers",
+    "sources": "https://github.com/Theoness1/banilla-hammers",
+    "issues": "https://github.com/Theoness1/banilla-hammers/issues"
+  },
+  "custom": {
+    "modmenu": {
+      "links": {
+        "modmenu.discord": "https://discord.gg/DcemWeskeZ",
+        "modmenu.curseforge": "https://curseforge.com/minecraft/mc-mods/banilla-hammers",
+        "modmenu.modrinth": "https://modrinth.com/mod/banilla-hammers"
+      }
+    },
+    "license": "MIT",
+    "icon": "assets/banilla_hammers/banillahammerpre.png",
+    "environment": "*",
+    "entrypoints": {
+      "main": [
+        "ru.theone_ss.banilla_hammers.BanillaHammers"
+      ],
+      "client": [
+        "ru.theone_ss.banilla_hammers.client.BanillaHammersClient",
+        "ru.theone_ss.banilla_hammers.client.RectangleEntityClient"
+      ]
+    },
+    "mixins": [
+      "banilla_hammers.mixins.json"
+    ],
+    "depends": {
+      "fabricloader": "*",
+      "fabric": "*",
+      "minecraft": "~1.18.2",
+      "java": ">=17"
+    }
+  }
+}
