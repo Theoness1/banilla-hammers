@@ -1,6 +1,6 @@
 # Banilla Hamers
 
-<img align="right" width="16" src="src/main/resources/assets/banilla_hammers/banillahammerpre.png">
+<img align="right" width="64" src="src/main/resources/assets/banilla_hammers/banillahammerpre.png">
 
 [![CurseForge Downloads](https://cf.way2muchnoise.eu/full_635337_downloads.svg)](https://www.curseforge.com/minecraft/mc-mods/banilla-hammers)
 [![Minecraft Versions](https://cf.way2muchnoise.eu/versions/635337.svg)](https://www.curseforge.com/minecraft/mc-mods/banilla-hammers)
