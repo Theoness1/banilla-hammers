@@ -37,7 +37,7 @@ public class HammerItem extends AxeItem {
             BlockPos pos = context.getBlockPos().up();
             RectangleEntity rectangle = new RectangleEntity(context.getWorld(), pos.getX(), pos.getY(), pos.getZ(), context.getPlayer());
             world.spawnEntity(rectangle);
-            context.getPlayer().getItemCooldownManager().set(context.getStack().getItem(), 640);
+            context.getPlayer().getItemCooldownManager().set(context.getStack().getItem(), 400);
             ItemStack stack = context.getPlayer().getStackInHand(context.getHand());
             stack.setDamage(stack.getDamage()+4);
         }
