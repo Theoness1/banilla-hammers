@@ -2,8 +2,8 @@ package ru.theone_ss.banilla_hammers.client;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.item.Item;
+import net.minecraft.registry.Registries;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.registry.Registry;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -21,7 +21,7 @@ public class TwoModelsItemRegistry {
      */
     public static void register(Item... items) {
         for(Item item : items) {
-            Identifier id = Registry.ITEM.getId(item);
+            Identifier id = Registries.ITEM.getId(item);
             ENTRIES.put(id, item);
         }
     }

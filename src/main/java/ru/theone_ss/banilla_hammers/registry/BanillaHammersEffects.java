@@ -3,8 +3,9 @@ package ru.theone_ss.banilla_hammers.registry;
 import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.effect.StatusEffect;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.registry.Registry;
 import ru.theone_ss.banilla_hammers.BanillaHammers;
 import ru.theone_ss.banilla_hammers.effect.StunEffect;
 
@@ -27,7 +28,7 @@ public class BanillaHammersEffects {
     }
 
     public static void init() {
-        EFFECTS.forEach((id, effect) -> Registry.register(Registry.STATUS_EFFECT, id, effect));
+        EFFECTS.forEach((id, effect) -> Registry.register(Registries.STATUS_EFFECT, id, effect));
     }
 
 }
