@@ -1,12 +1,23 @@
 {
-  "type": "minecraft:smithing",
-  "base": {
-    "item": "banilla_hammers:iron_hammer"
-  },
-  "addition": {
-    "item": "winterly:cryomarble"
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "C#C",
+    "#/#",
+    " / "
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:iron_ingot"
+    },
+    "C": {
+      "item": "winterly:cryomarble"
+    },
+    "/": {
+      "item": "minecraft:stick"
+    }
   },
   "result": {
-    "item": "banilla_hammers:cryomarble_hammer"
+    "item": "banilla_hammers:cryomarble_hammer",
+    "count": 1
   }
 }

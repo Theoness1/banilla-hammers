@@ -1,5 +1,5 @@
 {
-  "type": "minecraft:smithing",
+  "type": "minecraft:smithing_transform",
   "base": {
     "item": "banilla_hammers:diamond_hammer"
   },
@@ -8,5 +8,8 @@
   },
   "result": {
     "item": "banilla_hammers:netherite_hammer"
+  },
+  "template": {
+    "item": "minecraft:netherite_upgrade_smithing_template"
   }
 }
