@@ -5,11 +5,11 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.MovementType;
-import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.nbt.NbtCompound;
-import net.minecraft.network.Packet;
+import net.minecraft.network.listener.ClientPlayPacketListener;
+import net.minecraft.network.packet.Packet;
 import net.minecraft.network.packet.s2c.play.EntitySpawnS2CPacket;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.sound.SoundCategory;
@@ -44,11 +44,11 @@ public class RectangleEntity extends Entity {
     public void tick() {
 
         this.move(MovementType.SELF, this.getVelocity());
-
+        World world = getWorld();
         if(!world.isClient){
-            List<LivingEntity> list2 = this.world.getNonSpectatingEntities(LivingEntity.class, this.getBoundingBox());
+            List<LivingEntity> list2 = world.getNonSpectatingEntities(LivingEntity.class, this.getBoundingBox());
             for(LivingEntity livingEntity : list2) {
-                livingEntity.damage(DamageSource.MAGIC, 2F);
+                livingEntity.damage(world.getDamageSources().magic(), 2F);
                 livingEntity.setVelocity(0,0.75,0);
                 livingEntity.addStatusEffect(new StatusEffectInstance(BanillaHammersEffects.STUN, 7 * 20, 0, false, false, true), livingEntity);
             }
@@ -77,10 +77,10 @@ public class RectangleEntity extends Entity {
                     MathHelper.floor(box.maxY),
                     MathHelper.floor(box.maxZ)
             )) {
-                BlockState blockState = this.world.getBlockState(blockPos);
+                BlockState blockState = world.getBlockState(blockPos);
                 Block block = blockState.getBlock();
                 if (block instanceof CropBlock || block instanceof FernBlock || block instanceof SaplingBlock || block instanceof FlowerBlock || block instanceof TallPlantBlock) {
-                    bl = this.world.breakBlock(blockPos, true, this) || bl;
+                    bl = world.breakBlock(blockPos, true, this) || bl;
                 }
             }
             BlockState state = world.getBlockState(this.getBlockPos().down());
@@ -88,11 +88,11 @@ public class RectangleEntity extends Entity {
                 world.playSound(null, this.getX(), this.getY(), this.getZ(), state.getBlock().getSoundGroup(state).getBreakSound(), SoundCategory.BLOCKS, 1.3f, 1);
             }
         }
-        if (this.world.isClient) {
+        if (world.isClient) {
             for(int a = 1; a < 16; a++){
                 spawnSprintingParticles();
             }
-            this.world.addParticle(ParticleTypes.EXPLOSION, this.getX(), this.getY(), this.getZ(), 0.3, 0.1, 0.3);
+            world.addParticle(ParticleTypes.EXPLOSION, this.getX(), this.getY(), this.getZ(), 0.3, 0.1, 0.3);
         }
     }
 
@@ -121,7 +121,7 @@ public class RectangleEntity extends Entity {
     }
 
     @Override
-    public Packet<?> createSpawnPacket() {
+    public Packet<ClientPlayPacketListener> createSpawnPacket() {
         return new EntitySpawnS2CPacket(this);
     }
 }
