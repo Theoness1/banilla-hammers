@@ -23,7 +23,7 @@
     }
     },
     "license": "MIT",
-    "icon": "assets/banilla_hammers/banillahammerpre.png",
+    "icon": "assets/banilla_hammers/banillaHammers.png",
     "environment": "*",
     "entrypoints": {
       "main": [
@@ -40,7 +40,7 @@
     "depends": {
       "fabricloader": "*",
       "fabric": "*",
-      "minecraft": ">=1.19",
+      "minecraft": ">=1.20",
       "java": ">=17"
     }
   }
